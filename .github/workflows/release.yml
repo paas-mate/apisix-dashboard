@@ -30,7 +30,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Save apisix dashboard
         run: docker pull apache/apisix-dashboard;docker save apache/apisix-dashboard -o apisix-dashboard.tar.gz
-      - uses: dev-drprasad/delete-tag-and-release@v0.2.0
+      - uses: dev-drprasad/delete-tag-and-release@v1.0.1
         with:
           delete_release: true
           tag_name: latest_docker_image
